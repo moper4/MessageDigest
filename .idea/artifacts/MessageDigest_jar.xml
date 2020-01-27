@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="MessageDigest:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/MessageDigest_jar</output-path>
+    <root id="archive" name="MessageDigest.jar">
+      <element id="module-output" name="MessageDigest" />
+    </root>
+  </artifact>
+</component>

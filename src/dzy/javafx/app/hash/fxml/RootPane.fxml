@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import dzy.javafx.app.hash.fxml.RootPane?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.*?>
+<fx:root type="dzy.javafx.app.hash.fxml.RootPane" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" stylesheets="/dzy/javafx/app/hash/fxml/RootPane.css">
+    <MenuBar fx:id="menuBar">
+        <Menu text="%file">
+            <MenuItem fx:id="openMenu" text="%open">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+            <MenuItem fx:id="saveAsMenu" text="%saveAs">
+                <accelerator>
+                    <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+            <SeparatorMenuItem/>
+            <MenuItem fx:id="exitMenu" text="%exit">
+                <accelerator>
+                    <KeyCodeCombination alt="DOWN" code="F4" control="UP" meta="UP" shift="UP" shortcut="UP"/>
+                </accelerator>
+            </MenuItem>
+        </Menu>
+        <Menu fx:id="algorithmMenu" text="%algorithm"/>
+    </MenuBar>
+
+    <TextArea fx:id="textArea" VBox.vgrow="SOMETIMES">
+        <VBox.margin>
+            <Insets left="5.0" right="5.0"/>
+        </VBox.margin>
+    </TextArea>
+
+    <GridPane hgap="5.0" maxWidth="1.7976931348623157E308">
+        <columnConstraints>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
+            <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES"/>
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES"/>
+        </rowConstraints>
+        <VBox.margin>
+            <Insets left="5.0" right="5.0"/>
+        </VBox.margin>
+        <Button fx:id="openBtn" maxWidth="1.7976931348623157E308" text="%browse"/>
+        <Button fx:id="clearBtn" maxWidth="1.7976931348623157E308" text="%clean" GridPane.columnIndex="1"/>
+        <Button fx:id="copyBtn" maxWidth="1.7976931348623157E308" text="%copy" GridPane.columnIndex="2"/>
+        <Button fx:id="saveBtn" maxWidth="1.7976931348623157E308" text="%save" GridPane.columnIndex="3"/>
+        <Button fx:id="stopBtn" maxWidth="1.7976931348623157E308" text="%stop" disable="true" GridPane.columnIndex="4"/>
+    </GridPane>
+
+    <GridPane hgap="5.0" vgap="5.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER"/>
+            <ColumnConstraints hgrow="SOMETIMES"/>
+        </columnConstraints>
+        <VBox.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0"/>
+        </VBox.margin>
+        <Label text="%fileBar"/>
+        <Label text="%totalBar" GridPane.rowIndex="1"/>
+        <ProgressBar fx:id="fileTaskBar" maxWidth="1.7976931348623157E308" prefHeight="12.0" progress="0.0" GridPane.columnIndex="1"/>
+        <ProgressBar fx:id="totalTaskBar" maxWidth="1.7976931348623157E308" prefHeight="12.0" progress="0.0" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    </GridPane>
+</fx:root>
